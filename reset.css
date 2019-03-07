@@ -1,0 +1,80 @@
+html {
+    height: 100%;
+    /* 如果有溢出自动形成滚动条 */
+    overflow-y: auto;
+    /* 不想让iPhone横竖屏切换的时候调节文字 */
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    /* 去除移动端开发点击事件灰色背景如a标签 */
+    -webkit-tap-highlight-color: transparent;
+}
+
+body,
+div,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li,
+dd,
+dl,
+dt,
+pre,
+header,
+nav,
+section,
+footer,
+form,
+input,
+textarea,
+button,
+hr,
+td,
+th {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    border: none;
+    max-width: 100%;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    border: none;
+    outline: none;
+}
+
+/* 输入框提示语字体样式 */
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    color: #ccc;
+}
+
+/* 解决input的type=number在部分手机端出现一个小按钮 */
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+.clear:after {
+    content: '';
+    display: block;
+    clear: both;
+}

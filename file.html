@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title>拍照或选择图片</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <script>
+        ! function (e, t) {
+            function n() {
+                var n = l.getBoundingClientRect().width;
+                t = t || 540, n > t && (n = t);
+                var i = 100 * n / e;
+                r.innerHTML = "html{font-size:" + i + "px;}"
+            }
+            var i, d = document,
+                o = window,
+                l = d.documentElement,
+                r = document.createElement("style");
+            if (l.firstElementChild) l.firstElementChild.appendChild(r);
+            else {
+                var a = d.createElement("div");
+                a.appendChild(r), d.write(a.innerHTML), a = null
+            }
+            n(), o.addEventListener("resize", function () {
+                clearTimeout(i), i = setTimeout(n, 300)
+            }, !1), o.addEventListener("pageshow", function (e) {
+                e.persisted && (clearTimeout(i), i = setTimeout(n, 300))
+            }, !1), "complete" === d.readyState ? d.body.style.fontSize = "16px" : d.addEventListener(
+                "DOMContentLoaded",
+                function (e) {
+                    d.body.style.fontSize = "16px"
+                }, !1)
+        }(750, 750);
+    </script>
+</head>
+
+<body>
+    <input type="file" capture="camera" accept="image/*" />
+
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+</body>
+
+</html>
